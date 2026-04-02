@@ -1,19 +1,53 @@
-# 🎥 YouTube Chatbot (RAG with LangChain)
+# 🎥 YouTube Transcript Chatbot (RAG with LangChain)
 
-A conversational AI system for semantic Q&A over long YouTube transcripts using a RAG pipeline.
+An end-to-end **RAG-based conversational AI system** that enables semantic question answering over long YouTube transcripts.
+
+👉 **Live Demo:** https://anshul-ytchatbot.streamlit.app/
+
+---
 
 ## 🚀 Features
-- Ask questions from long videos (120+ mins)
-- faster information retrieval  
-- Context-aware answers using LLMs  
+- 🔍 Ask questions from long YouTube videos (120+ mins)
+- ⚡ ~90% reduction in manual search time  
+- 🧠 Context-aware answers using LLM + RAG  
+- 📄 Handles 150+ pages of transcript data   
+
+---
 
 ## 🧱 Tech Stack
-Python, LangChain, FAISS, YouTube API, OpenAI, RAG
+**Python • LangChain • FAISS • Streamlit • YouTube API • Hugging Face • RAG**
+
+---
+
+## 🖥️ Demo Preview
+
+![App Screenshot](./assets/demo.png)
+
+---
 
 ## ⚙️ How It Works
-1. Extract transcript  
-2. Split into chunks  
+1. Extract transcript from YouTube video  
+2. Split text using `RecursiveCharacterTextSplitter`  
 3. Generate embeddings  
-4. Store in FAISS  
-5. Retrieve relevant context  
-6. Generate answer  
+4. Store vectors in FAISS  
+5. Retrieve relevant chunks  
+6. Generate response using LLM  
+
+---
+
+## 🛠️ Run Locally
+
+```bash
+git clone https://github.com/your-username/youtube-chatbot-rag.git
+cd youtube-chatbot-rag
+pip install -r requirements.txt
+```
+- Create a .env file:
+```bash
+OPENAI_API_KEY=your_api_key
+YOUTUBE_API_KEY=your_api_key
+```
+- Run the app:
+```bash
+streamlit run app.py
+```
