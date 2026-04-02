@@ -38,16 +38,15 @@ An end-to-end **RAG-based conversational AI system** that enables semantic quest
 ## 🛠️ Run Locally
 
 ```bash
-git clone https://github.com/your-username/youtube-chatbot-rag.git
-cd youtube-chatbot-rag
+git clone https://github.com/anshul-singh1/Youtube-ChatBot.git
+cd Youtube-ChatBot
 pip install -r requirements.txt
 ```
 - Create a .env file:
 ```bash
-OPENAI_API_KEY=your_api_key
-YOUTUBE_API_KEY=your_api_key
+HF_TOKEN="xxxxxxxxxxxxx"
 ```
 - Run the app:
 ```bash
-streamlit run app.py
+python -m streamlit run app.py
 ```
